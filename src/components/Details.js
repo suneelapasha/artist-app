@@ -37,11 +37,13 @@ const useStyles = makeStyles((theme) => ({
           marginTop:'3rem',
       },
       detailAlign: {
-          marginTop:'2.5rem',
-          ['@media (max-width:500px)']: { // eslint-disable-line no-useless-computed-key
+        marginTop: '2.5rem',
+        textAlign: 'left',
+        ['@media (max-width:500px)']: { // eslint-disable-line no-useless-computed-key
             marginTop: '1rem',
           },
       },
+     
   }));
 
   function Details(props) {
@@ -59,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
             </Grid>
             <Grid item xs={8} md={8} className={classes.detailAlign} >
                 <Typography className={classes.details}>{results.name}</Typography>
-                <Typography className={classes.details}>{(results.facebook_page_url).substr(11)}</Typography>               
+                <Typography className={classes.details}>{results.facebook_page_url? (results.facebook_page_url).substr(11):''}</Typography>               
             </Grid>
             </Grid>
         </Paper>

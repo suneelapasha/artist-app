@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Details from '../components/Details'
 import Events from '../components/Events'
+
 //import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 function Filter() {
-    const classes = useStyles();
+    const classes = useStyles()
     const [ query, setQuery ] = useState(null)
     const [ artistName, setArtistName ] = useState(null)
     const [ totalEvents, setTotalEvents ] = useState(null)
